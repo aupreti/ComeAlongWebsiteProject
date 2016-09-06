@@ -13,7 +13,7 @@
 # WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 # See the License for the specific language governing permissions and
 # limitations under the License.
-#
+
 import webapp2
 import jinja2
 import os
@@ -32,6 +32,13 @@ JINJA_ENVIRONMENT = jinja2.Environment (
 
 header_template = JINJA_ENVIRONMENT.get_template('templates/header.html')
 footer_template = JINJA_ENVIRONMENT.get_template('templates/footer.html')
+navbarTemplate = JINJA_ENVIRONMENT.get_template('templates/navbar.html')
+bodyTemplate = JINJA_ENVIRONMENT.get_template('templates/body.html')
+aboutTemplate = JINJA_ENVIRONMENT.get_template('templates/about.html')
+contactTemplate = JINJA_ENVIRONMENT.get_template('templates/contact.html')
+supportTemplate = JINJA_ENVIRONMENT.get_template('templates/support.html')
+termsOfServiceTemplate = JINJA_ENVIRONMENT.get_template('templates/terms-of-service.html')
+
 
 class SendHandler(webapp2.RequestHandler):
     def post(self):
@@ -39,13 +46,44 @@ class SendHandler(webapp2.RequestHandler):
 
 class MainHandler(webapp2.RequestHandler):
     def get(self):
-        bodyTemplate = JINJA_ENVIRONMENT.get_template('templates/body.html')
         self.response.write(header_template.render())
+        self.response.write(navbarTemplate.render())
         self.response.write(bodyTemplate.render())
+        self.response.write(footer_template.render())
+
+class AboutHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write(header_template.render())
+        self.response.write(navbarTemplate.render())
+        self.response.write(aboutTemplate.render())
+        self.response.write(footer_template.render())
+
+class ContactHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write(header_template.render())
+        self.response.write(navbarTemplate.render())
+        self.response.write(contactTemplate.render())
+        self.response.write(footer_template.render())
+
+class SupportHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write(header_template.render())
+        self.response.write(navbarTemplate.render())
+        self.response.write(supportTemplate.render())
+        self.response.write(footer_template.render())
+
+class TermsOfServiceHandler(webapp2.RequestHandler):
+    def get(self):
+        self.response.write(header_template.render())
+        self.response.write(navbarTemplate.render())
+        self.response.write(termsOfServiceTemplate.render())
         self.response.write(footer_template.render())
 
 app = webapp2.WSGIApplication([
     ('/', MainHandler),
-    #('/notify', NotifyHandler),
     ('/send', SendHandler),
+    ('/about.html', AboutHandler),
+    ('/contact.html', ContactHandler),
+    ('/support.html', SupportHandler),
+    ('/terms-of-service.html', TermsOfServiceHandler)
 ], debug=True)

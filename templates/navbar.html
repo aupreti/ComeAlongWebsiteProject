@@ -1,0 +1,117 @@
+
+
+<body id="myPage" data-spy="scroll" data-target=".navbar" data-offset="50">
+
+<!-- navigation bar -->
+<nav class="navbar navbar-default navbar-fixed-top">
+  <div class="container-fluid">
+
+    <div class="navbar-header">
+      <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#myNavbar">
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+        <span class="icon-bar"></span>
+      </button>
+      <a class="navbar-brand" href="/">ComeAlong</a>
+    </div>
+
+    <div class="collapse navbar-collapse" id="myNavbar">
+      <ul class="nav navbar-nav navbar-right">
+        <li><a href="about.html">ABOUT</a></li>
+        <li><a data-toggle="modal" href="#signupModal">SIGNUP</a></li>
+        <li><a data-toggle="modal" href="#loginModal">LOGIN</a></li>
+      </ul>
+    </div>
+  </div>
+</nav>
+
+
+<!-- signup Modal -->
+<div class="modal fade" id="signupModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Signup for ComeAlong</h3>
+        </div>
+
+        <div class="modal-body text-center">
+          <span class="fa-stack fa-lg">
+              <i class="fa fa-square-o fa-stack-2x"></i>
+              <i class="fa fa-facebook fa-stack-1x"></i>
+          </span>
+          Connect with Facebook<br>
+
+          <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-google fa-stack-1x fa-inverse"></i>
+          </span>
+          Connect with Google 
+        </div>
+      </div>
+    </div>
+</div>
+
+<!-- login Modal -->
+<div class="modal fade" id="loginModal" role="dialog">
+    <div class="modal-dialog">
+    
+      <!-- Modal content-->
+      <div class="modal-content">
+
+        <div class="modal-header">
+          <button type="button" class="close" data-dismiss="modal">&times;</button>
+          <h3 class="modal-title">Login to ComeAlong</h3>
+        </div>
+
+        <div class="modal-body text-center">
+
+          <span class="fa-stack fa-lg">
+              <i class="fa fa-square-o fa-stack-2x"></i>
+              <i class="fa fa-facebook fa-stack-1x"></i>
+          </span>
+          Login with Facebook<br>
+
+          <span class="fa-stack fa-lg">
+              <i class="fa fa-circle fa-stack-2x"></i>
+              <i class="fa fa-google fa-stack-1x fa-inverse"></i>
+          </span>
+          Login with Google 
+          <br>
+          <br>
+          <div class="text-center">
+            ------------- or -------------
+          </div>
+
+          <div class="text-center">
+            <br>
+            <p>Login with your username</p>
+          </div>
+
+          <form role="form">
+            <div class="form-group">
+              <input type="text" class="form-control" id="usrname" placeholder="Enter username">
+            </div>
+            <div class="form-group">
+              <input type="text" class="form-control" id="psw" placeholder="Enter password">
+            </div>
+            <div class="checkbox">
+              <label><input type="checkbox" value="" checked>Remember me</label>
+            </div>
+              <button type="submit" class="btn btn-success btn-block"><span class="glyphicon glyphicon-off"></span> Login</button>
+          </form>
+
+        </div>
+
+        </div>
+      </div>
+      
+    </div>
+</div>
+
+
+
+

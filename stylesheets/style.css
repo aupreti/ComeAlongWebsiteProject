@@ -26,9 +26,6 @@
   color: blue;
 }
 
-.btn {
-	width:35%;
-}
 
 #nextAndBack{
 	margin-right: 35%;
@@ -60,8 +57,10 @@ body {
   }
 
   .container {
-      padding: 80px 120px;
+      padding: 40px 60px;
   } 
+
+
 
   .carousel-inner img {
       -webkit-filter: grayscale(90%);
@@ -110,10 +109,11 @@ body {
       color: #f5f5f5;
       padding: 32px;
   }
-  footer a {
+
+  .footer a {
       color: #f5f5f5;
   }
-  footer a:hover {
+  .footer a:hover {
       color: #777;
       text-decoration: none;
   }
