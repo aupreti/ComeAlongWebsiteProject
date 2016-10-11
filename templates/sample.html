@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <link rel="stylesheet" type="text/css" href="stylesheets/sample.css">
+
+</head>
+<body>
+
+<div class="container">
+
+<div id="intro" class="screen">
+  <br>
+  <br>
+  <h2><em>A poll based event planning app that will make your life easier.
+  </em></h2>
+</div>
+</div>
+
+
+ <div class="screen">
+  <div class="bike-screen">
+    <div class="bike">
+      <div class="left-handle"></div>
+      <div class="right-handle"></div>
+      <div class="headlight"></div>
+      <div class="left-suspension"></div>
+      <div class="left-support"></div>
+      <div class="right-suspension"></div>
+      <div class="right-support"></div>
+      <div class="body"></div>
+      <div class="wheel"></div>
+    </div>
+  </div>
+</div>
+</>
+
+
+<h1>Click Bike to refresh</h1>
+
+<script>
+$(".screen").click(function() {
+    var el = $(this),
+            newone = el.clone(true);
+    
+    el.before(newone);
+    $(el).remove();
+});
+
+</script>
+
+
+</body>
+</html>
+
