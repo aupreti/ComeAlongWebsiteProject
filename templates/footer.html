@@ -6,9 +6,9 @@
       <div class="col-sm-12">
           <nav class="navbar navbar-default navbar-footer">
               <ul class="nav navbar-nav navbar-left">
-                  <li><a href="contact.html">Contact Us</a></li>
-                  <li><a href="support.html">Support</a></li>
-                  <li><a href="terms-of-service.html">Terms of Service</a></li>
+                  <li><a href="contact">Contact Us</a></li>
+                  <li><a href="support">Support</a></li>
+                  <li><a href="terms-of-service">Terms of Service</a></li>
               </ul>
               <ul class="nav navbar-nav navbar-right social">
                   <li><a href="https://www.facebook.com/comealong2016/"><i class="fa fa-lg fa-facebook"></i></a></li>
@@ -27,7 +27,7 @@
 $(document).ready(function(){
   // Initialize Tooltip
   $('[data-toggle="tooltip"]').tooltip();
-  
+
   // Add smooth scrolling to all links in navbar + footer link
   $(".navbar a, footer a[href='#myPage']").on('click', function(event) {
 
@@ -45,7 +45,7 @@ $(document).ready(function(){
       $('html, body').animate({
         scrollTop: $(hash).offset().top
       }, 900, function(){
-   
+
         // Add hash (#) to URL when done scrolling (default click behavior)
         window.location.hash = hash;
       });

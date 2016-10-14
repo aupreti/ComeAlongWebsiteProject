@@ -18,7 +18,7 @@
 
     <div class="collapse navbar-collapse" id="myNavbar">
       <ul class="nav navbar-nav navbar-right">
-        <li><a href="about.html">ABOUT</a></li>
+        <li><a href="about">ABOUT</a></li>
         <li><a data-toggle="modal" href="#signupModal">SIGNUP</a></li>
         <li><a data-toggle="modal" href="#loginModal">LOGIN</a></li>
       </ul>
@@ -30,7 +30,7 @@
 <!-- signup Modal -->
 <div class="modal fade" id="signupModal" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
 
@@ -40,17 +40,21 @@
         </div>
 
         <div class="modal-body text-center">
-          <span class="fa-stack fa-lg">
-              <i class="fa fa-square-o fa-stack-2x"></i>
-              <i class="fa fa-facebook fa-stack-1x"></i>
-          </span>
-          Connect with Facebook<br>
+          <a href="/facebooklogin">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x"></i>
+            </span>
+            Connect with Facebook<br>
+          </a>
 
-          <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-google fa-stack-1x fa-inverse"></i>
-          </span>
-          Connect with Google 
+          <a href="/googlelogin">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-google fa-stack-1x fa-inverse"></i>
+            </span>
+            Connect with Google
+          </a>
         </div>
       </div>
     </div>
@@ -59,7 +63,7 @@
 <!-- login Modal -->
 <div class="modal fade" id="loginModal" role="dialog">
     <div class="modal-dialog">
-    
+
       <!-- Modal content-->
       <div class="modal-content">
 
@@ -70,17 +74,22 @@
 
         <div class="modal-body text-center">
 
-          <span class="fa-stack fa-lg">
-              <i class="fa fa-square-o fa-stack-2x"></i>
-              <i class="fa fa-facebook fa-stack-1x"></i>
-          </span>
-          Login with Facebook<br>
+          <a href="/facebooklogin">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-square-o fa-stack-2x"></i>
+                <i class="fa fa-facebook fa-stack-1x"></i>
+            </span>
+            Login with Facebook<br>
+          </a>
 
-          <span class="fa-stack fa-lg">
-              <i class="fa fa-circle fa-stack-2x"></i>
-              <i class="fa fa-google fa-stack-1x fa-inverse"></i>
-          </span>
-          Login with Google 
+          <a href="/googlelogin">
+            <span class="fa-stack fa-lg">
+                <i class="fa fa-circle fa-stack-2x"></i>
+                <i class="fa fa-google fa-stack-1x fa-inverse"></i>
+            </span>
+            Login with Google
+          </a>
+          
           <br>
           <br>
           <div class="text-center">
@@ -109,9 +118,6 @@
 
         </div>
       </div>
-      
+
     </div>
 </div>
-
-
-

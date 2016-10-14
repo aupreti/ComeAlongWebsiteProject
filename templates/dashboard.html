@@ -45,9 +45,9 @@
             </div>
             <div class="collapse navbar-collapse" id="myNavbar">
               <ul class="nav navbar-nav navbar-right">
-                <li class="active"><a href="dashboard.html"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> EVENTS <span class="sr-only">(current)</span></a></li>
-                <li><a href="new_event.html"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> NEW EVENT</a></li>
-                <li><a href="contacts.html"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> CONTACTS</a></li>
+                <li class="active"><a href="dashboard"><span class="glyphicon glyphicon-star" aria-hidden="true"></span> EVENTS <span class="sr-only">(current)</span></a></li>
+                <li><a href="new_event"><span class="glyphicon glyphicon-plus-sign" aria-hidden="true"></span> NEW EVENT</a></li>
+                <li><a href="contacts"><span class="glyphicon glyphicon-user" aria-hidden="true"></span> CONTACTS</a></li>
                 <li><a href="#"><span class="glyphicon glyphicon-search" aria-hidden="true"></span> DATABASE</a></li>
                <li><a href="#"><span class="glyphicon glyphicon-cog" aria-hidden="true"></span> SETTINGS</a></li>
               <li><a data-toggle="modal" href="#logout"><span class="glyphicon glyphicon-log-out" aria-hidden="true"></span> LOGOUT</a></li>
@@ -61,7 +61,7 @@
         <!-- signup Modal -->
         <div class="modal fade" id="logout" role="dialog">
             <div class="modal-dialog">
-            
+
               <!-- Modal content-->
               <div class="modal-content">
 
@@ -73,7 +73,9 @@
                 <div class="modal-body text-center">
                   <center>
                     <button type="submit" class="btn btn-default">Cancel</button>
-                    <button type="button" class="js-programmatic-multi-clear btn btn-default">Okay</button>
+                    <a href="/logout">
+                      <button type="button" class="js-programmatic-multi-clear btn btn-default">Okay</button>
+                    </a>
                   </center>
                 </div>
               </div>
@@ -93,7 +95,7 @@
             <div class="input-group">
               <input type="text" class="form-control" placeholder="Search Event...">
               <span class="input-group-btn">
-                
+
                 <button type="reset" class="btn btn-default">
                   <span class="glyphicon glyphicon-remove">
                     <span class="sr-only">Close</span>
@@ -143,7 +145,7 @@
                     <div class="row">
                       <div class="col-md-4"><h5><span class="glyphicon glyphicon-time" aria-hidden="true"></span> 9 P.M. Wednesday, Sept. 9</h5></div>
                       <div class="col-md-4"><h5><span class="glyphicon glyphicon-ok-circle" aria-hidden="true"></span> {{event.response_rate}}% Response</h5></div>
-                      <div class="col-md-4"><h5><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Top Response: {{event.top_response}} ({{event.top_response_votes}} Votes)</h5></div>  
+                      <div class="col-md-4"><h5><span class="glyphicon glyphicon-thumbs-up" aria-hidden="true"></span> Top Response: {{event.top_response}} ({{event.top_response_votes}} Votes)</h5></div>
                     </div>
                   </div>
 
@@ -209,7 +211,7 @@
 
     <!-- Script for showing/hiding panels -->
     <script>
-        $(function () {     
+        $(function () {
             $('a[data-toggle="collapse"]').on('click',function(){
                 var objectID=$(this).attr('href');
                 if($(objectID).hasClass('in')) {
@@ -218,7 +220,7 @@
                 else {
                     $(objectID).collapse('show');
                 }
-            });         
+            });
         });
 
         $(function () {
